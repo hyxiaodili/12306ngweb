@@ -1,4 +1,9 @@
-<!doctype html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/layout/include.jsp"%>
+<c:set var="url" value="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/ngweb" scope="page" />
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<!-- <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -9,15 +14,15 @@
 </head>
 
 <body>
-<div class="wrap">
+<div class="wrap"> -->
     <!--header start-->
-    <div class="header">
+<!--     <div class="header">
         <img src="../images/headlogo.png" alt="header-logo" width="140" height="50" />
         <span class="headermenu fleft">
             <a href="index.html">首页</a>
             <a href="search.html">查询</a>
             <a href="bookticket.html">购票</a>
-            <a href="returnticket.html">退票</a>
+            <a href="">退票</a>
             <a href="help.html">帮助</a>
             <a href="feedback.html">反馈</a>
         </span>
@@ -30,12 +35,12 @@
                 <li><a href="index.html">登出</a></li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!--header end-->
     
     <!--user information for register start-->
 	<div class="bookorder">
-		<div class="bookstep"><img src="../images/step1.png" alt="填写订单信息" width="1000" height="34" /></div>
+		<div class="bookstep"><img src="${url }/jsp/images/step1.png" alt="填写订单信息" width="1000" height="34" /></div>
 		<!--trains information start-->
 		<fieldset class="userinfors traininfos">
         	<legend>列车信息</legend>
@@ -82,7 +87,7 @@
                     <td class="tstartadd">北京西（8：00开）</td>
                     <td class="tendadd">上海虹桥（12：55到）</td>
                     <td class="ttime">4小时55分</td>
-                    <td class="tdo"><a href="changeticket.html" class="blue">[更改车次]</a></td>
+                    <td class="tdo"><a href="" class="blue">[更改车次]</a></td>
                 </tr>
                 <tr>
                     <td class="torder">T1234</td>
@@ -90,7 +95,7 @@
                     <td class="tstartadd">北京西（8：00开）</td>
                     <td class="tendadd">上海虹桥（12：55到）</td>
                     <td class="ttime">4小时55分</td>
-                    <td class="tdo"><a href="changeticket.html" class="blue">[更改车次]</a></td>
+                    <td class="tdo"><a href="" class="blue">[更改车次]</a></td>
                 </tr>
             </table>
         </div>
@@ -101,6 +106,11 @@
 			<h2 class="tableheader">常用联系人</h2>
 			<p class="contactcheck">
 				<span><input type="checkbox" name="checkuser" /><label>Jane</label></span>
+				<span><input type="checkbox" name="checkuser" /><label>Jane</label></span>
+				<span><input type="checkbox" name="checkuser" /><label>Jane</label></span>
+				<span><input type="checkbox" name="checkuser" /><label>Jane</label></span>
+				<span><input type="checkbox" name="checkuser" /><label>Jane</label></span>
+				<span class="fright pr5"><a href="" class="blue">[添加/修改常用联系人]</a></span>
 			</p>
 		</div>
 		<!--trains relationship end>
@@ -128,17 +138,15 @@
 					</select></td>
 					<td class="iticket"><select>
 						<option>成人票</option>
-						<option>儿童票</option>
-                        <option>学生票</option>
-                        <option>残军票</option>
+						<option>学生票</option>
 					</select></td>
 					<td class="iname"><input type="text" name="username" class="contactname" /></td>
 					<td class="icard"><select>
-                	<option>二代身份证</option>
-                    <option>港澳通行证</option>
-                    <option>台湾通行证</option>
-                    <option>护照</option>
-                </select></td>
+						<option>二代身份证</option>
+						<option>军官证</option>
+						<option>学生证</option>
+						<option>护照</option>
+					</select></td>
 					<td class="icid"><input type="text" name="username" class="contactid" /></td>
 					<td class="iphone"><input type="text" name="username" class="contactphone" /></td>
 					<td class="iuse"><input type="checkbox" /><label>保存到常用联系人</label></td>
@@ -153,24 +161,22 @@
 					</select></td>
 					<td class="iticket"><select>
 						<option>成人票</option>
-						<option>儿童票</option>
-                        <option>学生票</option>
-                        <option>残军票</option>
+						<option>学生票</option>
 					</select></td>
 					<td class="iname"><input type="text" name="username" class="contactname" /></td>
 					<td class="icard"><select>
-                        <option>二代身份证</option>
-                        <option>港澳通行证</option>
-                        <option>台湾通行证</option>
-                        <option>护照</option>
-                </select></td>
+						<option>二代身份证</option>
+						<option>军官证</option>
+						<option>学生证</option>
+						<option>护照</option>
+					</select></td>
 					<td class="icid"><input type="text" name="username" class="contactid" /></td>
 					<td class="iphone"><input type="text" name="username" class="contactphone" /></td>
 					<td class="iuse"><input type="checkbox" /><label>保存到常用联系人</label></td>
 					<td class="ido"><a href="" class="blue">[删除]</a></td>
 				</tr>			
 			</table>
-			<p class="tcenter mt10"><a href="addcontact.html"><input type="submit" name="adduser" class="btnadduser" value="新增"/></a></p>
+			<p class="tcenter"><input type="submit" name="adduser" class="btnadduser" value="新增"/></p>
 			<div class="describinfos">
 				<p>1. 一张有效身份证件同一乘车日期同一车次只能购买一张车票。</p>
 				<p>2. 购票时可使用的有效身份证件包括：中华人民共和国居民身份证、港澳居民来往内地通行证、台湾居民来往大陆通行证和按规定可使用的有效护照。 </p>
@@ -195,41 +201,41 @@
     <!--user information for register end-->
     
     <!--bottom start-->
-    <div class="bottom">
-        <img src="../images/bottomlogo.png" alt="12306ng-Logo" width="110" height="40" />
-        <span>
-            <a href="">新手上路</a><em>|</em>
-            <a href="">常见问题</a><em>|</em>
-            <a href="">意见反馈</a><em>|</em>
-            <a href="">关于 12306NG</a><em>|</em>
-            <a href="">团队成员</a><em>|</em>
-            <a href="">联系我们</a>
-        </span>
-    </div>
+<!--     <div class="bottom"> -->
+<!--         <img src="../images/bottomlogo.png" alt="12306ng-Logo" width="110" height="40" /> -->
+<!--         <span> -->
+<!--             <a href="">新手上路</a><em>|</em> -->
+<!--             <a href="">常见问题</a><em>|</em> -->
+<!--             <a href="">意见反馈</a><em>|</em> -->
+<!--             <a href="">关于 12306NG</a><em>|</em> -->
+<!--             <a href="">团队成员</a><em>|</em> -->
+<!--             <a href="">联系我们</a> -->
+<!--         </span> -->
+<!--     </div> -->
     <!--bottom end-->
 </div>
 
 <!--cinfirm ticket information-->
-<div class="bgcolor" id="bgcolor"></div>
-<div class="submitconfirm" id="submitconfirm">  
-	<h1 class="blue"><span class="user_close" onClick="infoIndden()"></span>提交确认</h1>
-	<p class="pt20 gray">车次信息</p>
-	<p class="trainconfirm"><span>2013年1月29日</span><span>T1234次</span><span>北京南（8：00开）</span><span>上海虹桥（12：55到）</span></p>
-    <ul>
-		<li>乘客信息<li>
-        <li>
-			<span>第1位</span>
-			<span>硬座</span>
-			<span>成人票</span>
-			<span class="black">Jane</span>
-			<span>二代身份证</span>
-			<span class="black">400000000000000000</span>
-			<span>15888888888</span>
-		</li>
-    </ul>
-	<p class="red mt10">请确认订单信息是否正确，如正确请点击“确认”按钮，系统将为您随机分配席位</p>
-	<p class="tcenter mt20"><a href="confirmticket.html"><input type="submit" name="submit" class="btnsubmit mr20" /></a><input type="submit" name="submit" class="btncancel" /></p>
-</div>
+<!-- <div class="bgcolor" id="bgcolor"></div> -->
+<!-- <div class="submitconfirm" id="submitconfirm">   -->
+<!-- 	<h1 class="blue"><span class="user_close" onClick="infoIndden()"></span>提交确认</h1> -->
+<!-- 	<p class="pt20 gray">车次信息</p> -->
+<!-- 	<p class="trainconfirm"><span>2013年1月29日</span><span>T1234次</span><span>北京南（8：00开）</span><span>上海虹桥（12：55到）</span></p> -->
+<!--     <ul> -->
+<!-- 		<li>乘客信息<li> -->
+<!--         <li> -->
+<!-- 			<span>第1位</span> -->
+<!-- 			<span>硬座</span> -->
+<!-- 			<span>成人票</span> -->
+<!-- 			<span class="black">Jane</span> -->
+<!-- 			<span>二代身份证</span> -->
+<!-- 			<span class="black">400000000000000000</span> -->
+<!-- 			<span>15888888888</span> -->
+<!-- 		</li> -->
+<!--     </ul> -->
+<!-- 	<p class="red mt10">请确认订单信息是否正确，如正确请点击“确认”按钮，系统将为您随机分配席位</p> -->
+<!-- 	<p class="tcenter mt20"><a href="confirmticket.html"><input type="submit" name="submit" class="btnsubmit mr20" /></a><input type="submit" name="submit" class="btncancel" /></p> -->
+<!-- </div> -->
 <!---->
 <script>
 function infoshow() {
@@ -249,5 +255,5 @@ $(function() {
 		})
 });
 </script>
-</body>
-</html>
+<!-- </body> -->
+<!-- </html> -->

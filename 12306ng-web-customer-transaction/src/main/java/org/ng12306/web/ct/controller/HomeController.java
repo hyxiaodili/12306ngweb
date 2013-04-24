@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
-@RequestMapping("/home")
+@RequestMapping("/")
 @SessionAttributes("ticketAttrSession")
 public class HomeController {
 
