@@ -1,5 +1,9 @@
 package org.ng12306.web.ct.entity;
 
+import java.util.List;
+
+import org.ng12306.web.ct.service.IMemberProcessService;
+
 /**
  * 用户抽象类实体--12306ngWeb
  * @author 李守宏
@@ -16,6 +20,20 @@ public class User {
 	 * The default user name
 	 */
 	public static final String ANONYMOUS_USER_NAME = "Anonymous";
+	/**
+	 * 乘客信息接口
+	 */
+	private IMemberProcessService memberProcessService;
+
+
+	public IMemberProcessService getMemberProcessService() {
+		return memberProcessService;
+	}
+
+	public void setMemberProcessService(IMemberProcessService memberProcessService) {
+		this.memberProcessService = memberProcessService;
+	}
+
 	/**
 	 * 主键
 	 */
@@ -34,14 +52,24 @@ public class User {
 	private String userName;
 
 	/**
-	 * 邮箱
-	 * @return
+	 * 关联乘客信息 登陆时把用户个人信息加载
 	 */
+	private List<Passenger> associatedPassenger;
 	/**
 	 * 关联票ID
 	 * String
 	 */
 	private String associatedTicketId;
+
+
+
+	public List<Passenger> getAssociatedPassenger() {
+		return associatedPassenger;
+	}
+
+	public void setAssociatedPassenger(List<Passenger> associatedPassenger) {
+		this.associatedPassenger = associatedPassenger;
+	}
 
 	/**
 	 * @return 票ID
@@ -57,6 +85,10 @@ public class User {
 		this.associatedTicketId = associatedTicketId;
 	}
 
+	/**
+	 * 邮箱
+	 * @return
+	 */
 	public String getEmail() {
 		return email;
 	}
@@ -116,6 +148,7 @@ public class User {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+
 
 
 }
