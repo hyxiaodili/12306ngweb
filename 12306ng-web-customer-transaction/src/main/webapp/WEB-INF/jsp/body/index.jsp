@@ -76,7 +76,7 @@
         <%-- <form:input path = "arriveStation" id = "arriveStation" placeholder="EndAddress" class="inputtxt"  /> --%>
         
         <input type="text" placeholder="出发日期" name="startDate"  id = "startDate" class="inputdate validate[required] text-input datepicker" value="" />
-        <input type="submit"  id ="go" value="查询" name="search" class="btnsearch f16" " />
+        <input type="submit"  id ="go" value="查询" name="search" class="btnsearch f16" />
         <!-- <input type="reset" value="重置"   class="btnsearch f16" algin="top" /> -->
     </div>   
     </form> 

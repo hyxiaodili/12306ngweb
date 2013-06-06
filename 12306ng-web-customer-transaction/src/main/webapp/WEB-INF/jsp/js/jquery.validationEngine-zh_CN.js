@@ -118,6 +118,11 @@
                     "regex": /^[0-9a-zA-Z]+$/,
                     "alertText": "* 不接受特殊字符"
                 },
+                "noSpecialChars": {
+                    //"regex": /^[0-9a-zA-Z\ \'\-\,]+$/,
+                	"regex": /^(?!_)(?!.*?_$)[a-zA-Z0-9_]+$/,
+                    "alertText": "* 文本包含无效字符 "
+                },
                 // --- CUSTOM RULES -- Those are specific to the demos, they can be removed or changed to your likings
                 "ajaxUserCall": {
                     "url": "ajaxValidateFieldUser",

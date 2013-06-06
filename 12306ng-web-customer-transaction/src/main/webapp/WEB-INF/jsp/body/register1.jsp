@@ -45,7 +45,7 @@
 	   <fieldset class="userinfors baseinfos">
            <legend>基本信息：</legend>
            <ul>
-               <li><label><em>*</em>用户名：</label><input type="text" name="userName" class="inputname validate[required,minSize[6],maxSize[30],custom[onlyLetterNumber]] text-input" />
+               <li><label><em>*</em>用户名：</label><input type="text" name="userName" class="inputname validate[required,minSize[6],maxSize[30],custom[noSpecialChars]] text-input" />
                <p>用户名由字母、数字或“_”组成，长度不少于6位，不多于30位</p></li>
                <li><label><em>*</em>密码：</label><input type="password" id="password"  name="password" class="inputname validate[required,minSize[6]] text-input" />
                <p>密码不得少于6位字符</p></li>
