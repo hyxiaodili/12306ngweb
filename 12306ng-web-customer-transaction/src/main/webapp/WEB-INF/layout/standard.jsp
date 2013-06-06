@@ -5,9 +5,8 @@
 <html>
 <head>
 
-<c:set var="url" value="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/ngweb" scope="page" />
+<c:set var="url" value="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/ngweb" scope="application" />
 
-      
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>

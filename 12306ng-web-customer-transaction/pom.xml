@@ -410,7 +410,8 @@
 						</systemProperty>						
 					</systemProperties>
 					<useTestClasspath>true</useTestClasspath>
-				
+					<reload>automatic</reload>
+					<scanIntervalSeconds>2</scanIntervalSeconds>
 					<webAppConfig>
 						<contextPath>/ngweb</contextPath>
 					</webAppConfig>

@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -9,9 +9,9 @@
 </head>
 
 <body>
-<div class="wrap">
+<div class="wrap"> -->
     <!--header start-->
-    <div class="header">
+<!--     <div class="header">
         <img src="../images/headlogo.png" alt="header-logo" width="140" height="50" />
         <span class="headermenu fleft">
             <a href="index.html">首页</a>
@@ -22,7 +22,7 @@
             <a href="feedback.html">反馈</a>
         </span>
         <span class="headerlogin fright"><a href="register.html">注册</a><a href="login.html">登录</a></span>
-    </div>
+    </div> -->
     <!--header end-->
     
     <!--user information for register start-->
@@ -34,7 +34,7 @@
     <!--user information for register end-->
     
     <!--bottom start-->
-    <div class="bottom">
+<!--     <div class="bottom">
         <img src="../images/bottomlogo.png" alt="12306ng-Logo" width="110" height="40" />
         <span>
             <a href="">新手上路</a><em>|</em>
@@ -48,4 +48,4 @@
     <!--bottom end-->
 </div>
 </body>
-</html>
+</html> -->
